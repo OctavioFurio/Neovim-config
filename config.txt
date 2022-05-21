@@ -1,0 +1,57 @@
+:set number
+:set relativenumber
+:set autoindent
+:set tabstop=4
+:set shiftwidth=4
+:set smarttab
+:set softtabstop=4
+:set mouse=a
+
+call plug#begin()
+
+Plug 'http://github.com/tpope/vim-surround' 
+Plug 'https://github.com/preservim/nerdtree'
+Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/ap/vim-css-color'
+Plug 'https://github.com/rafi/awesome-vim-colorschemes'
+Plug 'https://github.com/ryanoasis/vim-devicons'
+Plug 'https://github.com/tc50cal/vim-terminal'
+Plug 'https://github.com/preservim/tagbar'
+Plug 'https://github.com/terryma/vim-multiple-cursors'
+Plug 'tmsvg/pear-tree' 
+
+" More plugins can be added as needed.
+" Run :PlugInstall to install new plugins
+" Run :PlugClean to remove any plugins that were downloaded but are no longer on the list.
+
+set encoding=UTF-8
+
+call plug#end()
+
+" Here's a simple shortcut for NERDTtree. <C-t> = Ctrl + t
+nnoremap <C-t> :NERDTreeToggle<CR>
+
+" Choose any colorscheme here. You can try them out by typing
+" :colorscheme and pressing tab to list the options.
+:colorscheme focuspoint
+
+" Simple icons for NERDTree. 
+let g:NERDTreeDirArrowExpandable=">"
+let g:NERDTreeDirArrowCollapsible="v"
+
+" air-line stuff
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
